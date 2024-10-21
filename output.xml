@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-10-21T16:18:36.136317" rpa="false" schemaversion="5">
+<suite id="s1" name="Ts1 Google Search" source="C:\Users\Titadach\Desktop\robotworkspace\ts1_1search_course\ts1_google_search.robot">
+<test id="s1-t1" name="Navigate to Course Page, Wait for Loading, Double Click Element, and Wait" line="15">
+<kw name="Open Course Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:18:36.679681" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173/allcourse?editMajor=25531471103793'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-21T16:18:36.679238" elapsed="5.213251"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-21T16:18:41.892959" elapsed="0.054527"/>
+</kw>
+<status status="PASS" start="2024-10-21T16:18:36.677995" elapsed="5.269786"/>
+</kw>
+<kw name="Wait for and Double Click Element">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-10-21T16:18:44.319091" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-21T16:18:44.319564" level="FAIL">Element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/summary' not visible after 2 seconds.</msg>
+<arg>xpath=${XPATH_FIGURE}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-10-21T16:18:41.948990" elapsed="2.384524">Element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/summary' not visible after 2 seconds.</status>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<arg>xpath=${XPATH_FIGURE}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-10-21T16:18:44.335151" elapsed="0.000218"/>
+</kw>
+<status status="FAIL" start="2024-10-21T16:18:41.948418" elapsed="2.387572">Element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/summary' not visible after 2 seconds.</status>
+</kw>
+<kw name="Wait After Double Click">
+<status status="NOT RUN" start="2024-10-21T16:18:44.338671" elapsed="0.000382"/>
+</kw>
+<kw name="Click Second Element">
+<status status="NOT RUN" start="2024-10-21T16:18:44.348693" elapsed="0.000147"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-10-21T16:18:44.352578" elapsed="0.000156"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-10-21T16:18:44.365339" elapsed="0.000136"/>
+</kw>
+<doc>Navigate to the course page, wait for loading, double-click the specified element, and wait for 5 seconds.</doc>
+<tag>navigation, wait, click</tag>
+<status status="FAIL" start="2024-10-21T16:18:36.676519" elapsed="7.719697">Element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/summary' not visible after 2 seconds.</status>
+</test>
+<status status="FAIL" start="2024-10-21T16:18:36.139864" elapsed="8.292961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">navigation, wait, click</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Ts1 Google Search">Ts1 Google Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

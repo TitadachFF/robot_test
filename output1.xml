@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-08-19T16:22:51.768063" rpa="false" schemaversion="5">
+<suite id="s1" name="Ts1 Google Search" source="D:\robotworkspace\ts1_1search_course\ts1_google_search.robot">
+<test id="s1-t1" name="Navigate to Course Page, Wait for Loading, Double Click Element, and Wait" line="15">
+<kw name="Open Course Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-19T16:22:51.877774" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5173/allcourse?editMajor=25531471103793'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-19T16:22:51.877774" elapsed="1.349796"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-19T16:22:53.227570" elapsed="0.032114"/>
+</kw>
+<status status="PASS" start="2024-08-19T16:22:51.877774" elapsed="1.381910"/>
+</kw>
+<kw name="Wait for and Double Click Element">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${XPATH_FIGURE}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-19T16:22:53.260684" elapsed="0.432804"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-19T16:22:53.693488" level="INFO">Double clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/summary'.</msg>
+<arg>xpath=${XPATH_FIGURE}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T16:22:53.693488" elapsed="0.275132"/>
+</kw>
+<status status="PASS" start="2024-08-19T16:22:53.260684" elapsed="0.707936"/>
+</kw>
+<kw name="Wait After Double Click">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T16:22:58.968909" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T16:22:53.968620" elapsed="5.000289"/>
+</kw>
+<status status="PASS" start="2024-08-19T16:22:53.968620" elapsed="5.000289"/>
+</kw>
+<kw name="Click Second Element">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${XPATH_SECOND}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-19T16:22:58.968909" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-19T16:22:58.968909" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div/form/div[1]/div[5]/details[1]/div/ul/li[1]/span'.</msg>
+<arg>xpath=${XPATH_SECOND}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T16:22:58.968909" elapsed="0.036906"/>
+</kw>
+<status status="PASS" start="2024-08-19T16:22:58.968909" elapsed="0.036906"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-19T16:22:59.126228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-19T16:22:59.006820" elapsed="0.119408"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-19T16:22:59.126228" elapsed="2.073222"/>
+</kw>
+<doc>Navigate to the course page, wait for loading, double-click the specified element, and wait for 5 seconds.</doc>
+<tag>navigation, wait, click</tag>
+<status status="PASS" start="2024-08-19T16:22:51.877774" elapsed="9.321676"/>
+</test>
+<status status="PASS" start="2024-08-19T16:22:51.768063" elapsed="9.431387"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">navigation, wait, click</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ts1 Google Search">Ts1 Google Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
